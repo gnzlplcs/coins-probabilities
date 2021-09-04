@@ -18,19 +18,16 @@ const letsPlay = () => {
   let tailTail = 0;
   let headTail = 0;
   for (let i = 0; i < 100; i++) {
-    if (coin1() === "Head" && coin2() === "Head") {
-      headHead++;
-    } else if (coin1() === "Tail" && coin2() === "Tail") {
-      tailTail++;
-    } else {
-      headTail++;
-    }
+    if (coin1() === "Head" && coin2() === "Head") headHead++;
+    else if (coin1() === "Tail" && coin2() === "Tail") tailTail++;
+    else headTail++;
   }
-  console.log(`
-  Head & Head: ${headHead}
-  Tail & Tail: ${tailTail}
-  Mix: ${headTail}
-  `);
+  let result = `
+    Mix: ${headTail}
+    Head & Head: ${headHead}
+    Tail & Tail: ${tailTail}
+  `;
+  console.log(result);
 };
 
 letsPlay();
